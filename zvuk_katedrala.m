@@ -14,6 +14,6 @@ y = conv(audio, response); %takes funcking ages in time domain!
 
 y = 0.999 * y * max(abs(y)); %normalize signal
 
-audiowrite("C:\Users\Já\Downloads\impulsni_odezva\shrek.wav",  y, fs1);
+audiowrite("C:\Users\Já\Downloads\impulsni_odezva\modified.wav",  y, fs1);
 
-sound(y, fs1);
+%sound(y, fs1);
