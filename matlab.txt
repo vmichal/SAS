@@ -31,7 +31,7 @@ rref ... Gauss-Jordanova eliminace (row -echelon form) matice
 mean(vektor) .. aritmetický průměr
 
 Vektorizace:
-sin(vektor) ... aplikuje sin na každý prvek samostatně
+sin(vektor), square(vektor), sawtooth(vektor) ... aplikuje sin na každý prvek samostatně, generuje sin, obdélník, pilu
 rand(rows, cols) ... matice náhodných čísel z intervalu [0, 1]
 
 linspace(start, end, dělení) ... generuje vektor dělící [start, end] ekvidistantně na dělení-1 dílků
@@ -46,8 +46,15 @@ clc ... vyčistí command window (ne historii)
 zeros(rows, cols) ... generuje nulovou matici
 ones(rows, cols) ... generuje matici jedniček (nikoli jednotkovou)
 
+subplot(rows, cols, index) ... chceme grafy ve třech řádcích, jednom sloupci, nyní chceme kreslit do grafu 1 (počítáno od 1 do row*col) po řádcích
 plot(x, y); ... plotne graf s osou x a y (spojitý)
 plot(x, y, '.'); ... vykreslí jen body
 stem(x, y); ... vykreslí body a spojí je s osou x
+title("string name"); .. pojmenuje graf
 
 sound(y, freq); ... pustí daný signál s freq samply za sekundu
+
+figure; ... otevře nové grafové okno a přepne se na něj s kreslením
+
+Stringy v "" nebo '', jsou to vektory znaků, lze tudíž provádět "aritmetiku"
+"ahoj" + "ahoj; ["ahoj" "ahoj"] ... string concat, "maticová podoba"
