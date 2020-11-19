@@ -1,0 +1,16 @@
+během modelování se automaticky upravuje krok solveru, což může při dlouhém čase způsobit velké zuby.
+Modeling -> Model settings (Ctrl+E) -> solver details -> max step size; nad tím se nastavuje délka simulace
+
+ctrl+shift clink vytvoří na drátu uzel
+
+Připojení sinks -> To Workspace na signál dostane do matlabu strukturu s fieldy time, data.
+To se plotne a z matlab plotu lze file->sive as exportovat i vektorově.
+
+sine generátor je time based (spojité) či sample based (diskrétní).
+Sample time je vzorkovací krok (převrácená vzorkovací frekvence, pro sample time = 0.1 je fs = 10).
+Samples per period souvisí s frekvencí sinusovky. Pakliže máme deset vzorků za sekundu a máme dvacet vzorků na periodu,
+potom perioda je zřejmě 2s (0.5Hz) ---> frekvence signálu = vzorkovací frekvence / vzorků na periodu
+
+Pro diskrétní systémy by se měl v Model settings nastavit fixed step + discrete solver.
+Aj ten spojitý solver to nějak rozdýchá, ale diskrétní je optimální.
+Pro spojité systémy je nejlepší ODE45 (Runge Kutta metoda)
