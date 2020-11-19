@@ -58,3 +58,6 @@ figure; ... otevře nové grafové okno a přepne se na něj s kreslením
 
 Stringy v "" nebo '', jsou to vektory znaků, lze tudíž provádět "aritmetiku"
 "ahoj" + "ahoj; ["ahoj" "ahoj"] ... string concat, "maticová podoba"
+
+Predikátové přiřazení (filtrování): Nechť a je vektor, poté
+a(a < 5) = 0; a(a==0) = []; do všech prvků menších jak 5 přiřadí nulu a následně všechn nuly odstraní.
