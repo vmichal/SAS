@@ -1,0 +1,53 @@
+matice = [prvni radek ; druhy radek]
+[matice matice], [matice; matice] ... spojení matic vedle sebe či pod sebe
+scalar + matice, scalar * matice ... elementwise addition, násobení skalárem
+matice .* matice ... element wise multiplication
+matice * matice ... klasické násobení matic
+matice' ... Hermitovská transpozice (transponovat, komplexně sdružit)
+matice.' ... transpozice
+matice(:) ...  pospojovat sloupcové vektory za sebe do jediného sloupce.
+	Lze navázat .' pro transponování a získat řádkový vektor
+sum(matice, 1 či 2) ... sečíst sloupcové či řádkové vektory matice; implicitně 1
+matice(row, col) ... prvek A na row, col. indexováno od jedničky; lze přiřazovat;
+		zápis out of bounds rozšíří matici na danou velikost a doplní nuly
+		indexy mohou být 'end'...poslední čádek/sloupec či speciální ':', který znamená "všechny"
+		indexy mohou být vektor, poté výsledkem je matice zvolených řádků/sloupců
+
+inv(matice), det(matice) ... inverzí matice, determinant matice
+size(matice, 1 či 2) ... velikost matice v daném směru (počet řádků či sloupců), implicitně vypíše obojí
+
+doc command, help command ... nápověda. doc je všechno, help je jen základní info
+help ops ... nápověda k operátorům
+help elfun ... elementární funkce (sin, cos)
+help elmat ... elementární funkce pro matice
+
+length(matice) ... vrátí délku "největí dimenze" - max(počet sloupců, počet řádků)
+start:step:end ... zápis pro generování vektorů (obě hranice inclusive)
+
+matice(:,3) = [] ... odstranění třetího sloupce
+
+fft ... Fast Fourier transform
+rref ... Gauss-Jordanova eliminace (row -echelon form) matice
+mean(vektor) .. aritmetický průměr
+
+Vektorizace:
+sin(vektor) ... aplikuje sin na každý prvek samostatně
+rand(rows, cols) ... matice náhodných čísel z intervalu [0, 1]
+
+linspace(start, end, dělení) ... generuje vektor dělící [start, end] ekvidistantně na dělení-1 dílků
+logspace(start, end, dělení) ... start, end jsou exponenty. Umocní se se základem 10 (dekády)
+
+name shadowing: proměnná překryje jméno built in funkce.
+	Soubor ve working directory překryje jméno funkce (Matlab se jej snaží interpretovat jako novou definici)
+clear var ... odstraní danou proměnnou
+clear ... odstraní všechny proměnné
+clc ... vyčistí command window (ne historii)
+
+zeros(rows, cols) ... generuje nulovou matici
+ones(rows, cols) ... generuje matici jedniček (nikoli jednotkovou)
+
+plot(x, y); ... plotne graf s osou x a y (spojitý)
+plot(x, y, '.'); ... vykreslí jen body
+stem(x, y); ... vykreslí body a spojí je s osou x
+
+sound(y, freq); ... pustí daný signál s freq samply za sekundu
