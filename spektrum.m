@@ -1,7 +1,7 @@
 
 fs = 100;
 
-f = 10;
+f1 = 10; f2 = 11;
 A = 1;
 dur = 5;
 
@@ -9,7 +9,7 @@ sample_count = fs * dur;
 sampling_step = 1/fs;
 
 time = (0 : sample_count-1) * sampling_step;
-u = A * cos(2 * pi * time * f);
+u = A * cos(2 * pi * time * f1) + A * cos(2 * pi * time * f2);
 
 subplot(3, 1, 1);
 stem(time, u);

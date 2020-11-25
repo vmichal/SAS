@@ -2,8 +2,8 @@ close all
 clear all
 clc
 
-fs = 8000;
-f = 3000;
+fs = 10000;
+f = 8000;
 A = 0.8;
 dur = 1;
 
